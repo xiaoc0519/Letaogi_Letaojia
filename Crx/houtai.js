@@ -24,12 +24,9 @@
                 input.setAttribute('class','layui-btn layui-btn-sm')
                 input.setAttribute('type','button')
                 input.setAttribute('id','nav')
-                input.value = '御!'
+                input.value = 'Click me'
                 ifnav.appendChild(input)
                 nav = iframed.contentWindow.document.getElementById('nav')
-                iframed.contentWindow.document.getElementById('btn').value = '显!'
-                iframed.contentWindow.document.getElementById('btn').nextElementSibling.value = '添!'
-                iframed.contentWindow.document.getElementById('refresh').value = '刷!'
                 nav.onclick = function(){
                     iframed.contentWindow.document.getElementById('btn').nextElementSibling.click()
                     var title = iframed.contentWindow.document.getElementsByClassName('layui-layer-title')[0]
@@ -43,29 +40,6 @@
                         inp.value = value
                         inp.style.margin = '3px'
                         title.after(inp)
-                    }
-                    var inp3 = document.createElement('input')
-                    abtn(inp3,'Successful && Submit it!!')
-                    inp3.onclick = function(){
-                        let iiframeddom = iframed.contentWindow.document.getElementById('layui-layer-iframe1')
-                        let iiframed = iiframeddom.contentWindow.document
-                        let line = iiframed.getElementsByClassName('layui-form-item')
-                        line[6].nextElementSibling.click()
-                        line[8].firstElementChild.click()
-                    }
-                    var inp2 = document.createElement('input')
-                    abtn(inp2,'Biubiubiubiu····')
-                    inp2.onclick = function(){
-                        let dataa = prompt()
-                        dataa = dataa.replace(/\s+/g,' ')
-                        let list = dataa.split(' ')
-                        let iiframeddom = iframed.contentWindow.document.getElementById('layui-layer-iframe1')
-                        let iiframed = iiframeddom.contentWindow.document
-                        let line = iiframed.getElementsByClassName('layui-form-item')
-                        line[3].childNodes[1].childNodes[3].childNodes[1].value = list[3]
-                        line[3].childNodes[5].childNodes[3].childNodes[1].value = list[3]
-                        line[1].childNodes[15].childNodes[3].childNodes[1].value =list[5]
-                        line[1].childNodes[17].childNodes[3].childNodes[1].value =list[5]
                     }
                     var inp = document.createElement('input')
                     abtn(inp,'<(￣︶￣)↗[GO!]')
