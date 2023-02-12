@@ -83,11 +83,11 @@ class Frame_ldv3hjab_0(Frame):
         self.tk_input_ldv5066a = self.__tk_input_ldv5066a()
 
     def __frame(self):
-        self.place(x=0, y=0, width=600, height=500)
+        self.place(x=0, y=0, width=650, height=500)
 
     def __tk_label_ldv43rvf(self):
-        label = Label(self,text="Ver 0.1 demo by xiaoc0519 2023",anchor="center")
-        label.place(x=405, y=440, width=176, height=24)
+        label = Label(self,text="Ver 0.1 demo by xiaoc0519",anchor="center")
+        label.place(x=380, y=440, width=176, height=24)
         return label
 
     def __tk_label_ldv4te4l(self):
