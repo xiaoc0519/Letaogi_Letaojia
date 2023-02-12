@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter.ttk import *
-import requests,re,json
+import requests,re,json,datetime
 
 def scrollbar_autohide(bar,widget):
     def show():
@@ -68,6 +68,7 @@ class Frame_ldv3hjab(Notebook):
         self.place(x=0, y=0, width=600, height=500)
 
 class Frame_ldv3hjab_0(Frame):
+    
     def __init__(self,parent):
         super().__init__(parent)
         self.__frame()
@@ -78,7 +79,6 @@ class Frame_ldv3hjab_0(Frame):
         self.tk_input_ldv4xo0c = self.__tk_input_ldv4xo0c()
         self.tk_button_ldv4xyzv = self.__tk_button_ldv4xyzv()
         self.tk_button_ldv4xyzvv = self.__tk_button_ldv4xyzvv()
-        self.tk_label_ldv4z6bm = self.__tk_label_ldv4z6bm()
         self.tk_label_ldv4zs56 = self.__tk_label_ldv4zs56()
         self.tk_input_ldv5066a = self.__tk_input_ldv5066a()
 
@@ -101,8 +101,9 @@ class Frame_ldv3hjab_0(Frame):
         return label
 
     def __tk_text_ldv4wo77(self):
-        text = Text(self)
+        text = Text(self,borderwidth=0,background='#f0f0f0',highlightcolor='#f0f0f0',highlightbackground='#f0f0f0')
         text.place(x=360, y=10, width=220, height=424)
+        text.config(state=DISABLED)
         return text
 
     def __tk_input_ldv4xo0c(self):
@@ -119,11 +120,6 @@ class Frame_ldv3hjab_0(Frame):
         btn = Button(self, text="Post")
         btn.place(x=150, y=250, width=110, height=40)
         return btn
-
-    def __tk_label_ldv4z6bm(self):
-        label = Label(self,text="这里是登录的id",anchor="center")
-        label.place(x=180, y=10, width=150, height=44)
-        return label
 
     def __tk_label_ldv4zs56(self):
         label = Label(self,text="* 这里是注意事项",anchor="center")
@@ -175,9 +171,9 @@ class Frame_ldv3hjab_1(Frame):
         return btn
 
     def __tk_text_ldv7dw4e(self):
-        text = Text(self)
+        text = Text(self,borderwidth=0,background='#f0f0f0',highlightcolor='#f0f0f0',highlightbackground='#f0f0f0')
         text.place(x=360, y=10, width=220, height=424)
-        
+        text.config(state=DISABLED)
         return text
 
     def __tk_label_ldvolgae(self):
@@ -203,8 +199,9 @@ class Frame_ldv3hjab_2(Frame):
         return label
 
     def __tk_text_ldv7fnvf(self):
-        text = Text(self)
+        text = Text(self,borderwidth=0,background='#f0f0f0',highlightcolor='#f0f0f0',highlightbackground='#f0f0f0')
         text.place(x=360, y=10, width=220, height=424)
+        text.config(state=DISABLED)
         
         return text
 
@@ -237,8 +234,9 @@ class Frame_ldv3hjab_3(Frame):
         self.place(x=0, y=0, width=600, height=500)
 
     def __tk_text_ldv7hi3u(self):
-        text = Text(self)
+        text = Text(self,borderwidth=0,background='#f0f0f0',highlightcolor='#f0f0f0',highlightbackground='#f0f0f0')
         text.place(x=360, y=10, width=220, height=424)
+        text.config(state=DISABLED)
         
         return text
 
@@ -275,8 +273,9 @@ class Frame_ldv3hjab_4(Frame):
         self.place(x=0, y=0, width=600, height=500)
 
     def __tk_text_ldv7iie9(self):
-        text = Text(self)
+        text = Text(self,borderwidth=0,background='#f0f0f0',highlightcolor='#f0f0f0',highlightbackground='#f0f0f0')
         text.place(x=360, y=10, width=220, height=424)
+        text.config(state=DISABLED)
         
         return text
 
@@ -309,7 +308,7 @@ class Frame_ldv3hjab_5(Frame):
 
     def __tk_table_ldv7iw6p(self):
         # 表头字段 表头宽度
-        columns = {"ID":113,"字段#1":170,"字段#2":283}
+        columns = {"组名":113,"成交":170,"小组人数":83,"人均成交":200}
         # 初始化表格 表格是基于Treeview，tkinter本身没有表格。show="headings" 为隐藏首列。
         tk_table = Treeview(self, show="headings", columns=list(columns))
         for text, width in columns.items():  # 批量设置列属性
@@ -321,12 +320,13 @@ class Frame_ldv3hjab_5(Frame):
         return tk_table
 
     def __tk_label_ldv7j3z5(self):
-        label = Label(self,text="datetime",anchor="center")
+        label = Label(self,text=datetime.datetime.now(),anchor="center")
         label.place(x=10, y=230, width=185, height=24)
         return label
 
     def __tk_input_ldv7jn0o(self):
         ipt = Entry(self)
+        ipt.insert(0, '钢铁组,1,A组,1,星梦,1,腾飞,1,皇族,1')
         ipt.place(x=100, y=120, width=397, height=49)
         return ipt
 
@@ -355,8 +355,9 @@ class Frame_ldv3hjab_6(Frame):
         return btn
 
     def __tk_text_ldv7laai(self):
-        text = Text(self)
+        text = Text(self,borderwidth=0,background='#f0f0f0',highlightcolor='#f0f0f0',highlightbackground='#f0f0f0')
         text.place(x=360, y=10, width=220, height=424)
+        text.config(state=DISABLED)
         
         return text
 
@@ -443,8 +444,9 @@ class Frame_ldv3hjab_8(Frame):
         self.place(x=0, y=0, width=600, height=500)
 
     def __tk_text_ldv5ddcv(self):
-        text = Text(self)
+        text = Text(self,borderwidth=0,background='#f0f0f0',highlightcolor='#f0f0f0',highlightbackground='#f0f0f0')
         text.place(x=150, y=30, width=300, height=424)
+        text.config(state=DISABLED)
         
         return text
 
@@ -477,24 +479,143 @@ class Win(WinGUI):
         requests.post(webhook,headers={'Content-Type': 'application/json'},
                  data=json.dumps(bo))
 
+    def inertT(self,entryv,t):
+        entryv.config(state=NORMAL)
+        entryv.insert(END,t+'\n')
+        entryv.see(END)
+        entryv.config(state=DISABLED)
+
+
     def submit0(self,evt):
-        print("<Button-1>事件未处理",evt)
+        print("info",evt)
         '''
-        get user cookie
-        post member list
-        get cookie-name
+            请求我的客户资源 
+            用re提取登记人名
         '''
+        self.cookie = self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_0.tk_input_ldv4xo0c.get()
+        self.cookie = self.cookie if self.cookie != '' else '未输入cookie'
+        if self.cookie == '':return 0
+        self.inertT(self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_0.tk_text_ldv4wo77,self.cookie)
+        url = 'https://letaojiabackstage.letaojiashop.com/Member/GetMeunData?page=1&limit=20'
+        headers ={
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.23',
+            'Cookie': self.cookie,
+            'Content-Type': 'application/json'}
+        try:
+            req = requests.get(url=url,headers=headers)
+        except:
+            self.inertT(self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_0.tk_text_ldv4wo77,'cookie 出错')
+            return 0
+        reqq = json.loads(req.text)
+        if reqq['count'] == 0:
+            self.inertT(self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_0.tk_text_ldv4wo77,'请先在会员列表创建一个会员')
+            return 0
+        reqqq = reqq.get('data')
+        id = reqqq[0]['userid']
+        url2 = f'https://letaojiabackstage.letaojiashop.com/Member/MemberEdit?id={int(id)}'
+        print(url2)
+        req2 = requests.get(url=url2,headers=headers)
+        html = req2.text
+        # print(html)
+        self.name = re.findall(r'<option value="(.*?)" selected>(.*?)</option>',html)
+        self.inertT(self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_0.tk_text_ldv4wo77,f'你好：{self.name[1][1].strip()}')
+        return self.name
+
     
     def submit00(self,evt):
-        print("<Button-1>事件未处理",evt)
+        print("post later",evt)
         '''
         test post link
         '''
-        webhook = 'webhook'
-        self.post(webhook)
+        self.inertT(self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_0.tk_text_ldv4wo77,self.name[1][1].strip())
+        # webhook = self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_0.tk_input_ldv5066a.get()
+
+        # self.post(webhook)
         
     def submit1(self,evt):
-        print("<Button-1>事件未处理",evt)
+        print("guadian writting",evt)
+        self.wangwang = self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_1.tk_input_ldv7dgph.get()
+        self.phone = self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_1.tk_input_ldv7dl5w.get()
+        if self.wangwang == '':
+            self.inertT(self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_1.tk_text_ldv7dw4e,'输入旺旺')
+            return 0
+        elif self.phone == '':
+            self.inertT(self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_1.tk_text_ldv7dw4e,'输入手机号')
+            return 0
+        headers ={
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.23',
+            'Cookie': self.cookie,
+            'Content-Type': 'application/json'}
+        body = {
+            'itemid': 0,
+            'title': '西南地区1皇冠珠宝首饰淘宝网店',
+            'areaid': 23,
+            'catid': 9,
+            'credit': 11,
+            'typeid': 46,
+            'titleTips':'', 
+            'fuwuguwen': int(self.name[1][0]),
+            'price': 10000,
+            'lowPrice': 10000,
+            'renzhengleixing': '个人',
+            'creattime': 2023,
+            'goodpercent': 99,
+            'bail': 0,
+            'bailreturn': 0,
+            'jishunianfei': 0,
+            'nianfeiReturn': 0,
+            'flowers': 0,
+            'fans': 0,
+            'xuni': 0,
+            'sellType': '协议变更,',
+            'mobile': self.phone,
+            'memberid': '9ac50857d48418b0',
+            'qq': self.phone,
+            'ali':'', 
+            'shopurl': self.wangwang, 
+            'shopkeeper': self.wangwang,
+            'newTmall': 0,
+            'tmalltype': '',
+            'otherTypes':'', 
+            'select':'', 
+            'erjileimu':'', 
+            'tradeMark':'', 
+            'angleMark': 0,
+            'pasteCard': 0,
+            'zhucezijin': 0,
+            'jiaonazizhi':'', 
+            'xufeijiezhi':'', 
+            'score2': 0,
+            'score1bi': '高',
+            'score3':0, 
+            'score2bi':'高',
+            'score1': 0,
+            'score3bi':'高',
+            'yibankoufen': 0,
+            'yanzhongkoufen': 0,
+            'jiamaokoufen': 0,
+            'jignyingzhuangtai':'', 
+            'creditScore': '',
+            'huoyuan':0,
+            'malltag':'', 
+            'introduce': '西南地区,1皇冠珠宝首饰淘宝网店,好评99%，动态全红！强烈推荐！',
+            'file':'', 
+            'thumb':'', 
+            'pointsScreen':'', 
+        }
+        url = 'https://letaojiabackstage.letaojiashop.com/Mall/MallEdit'
+        try:
+            req = requests.post(url=url,headers=headers,data=json.dumps(body))
+        except:
+            self.inertT(self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_1.tk_text_ldv7dw4e,'旺旺或手机号出错，或者已存在相同旺旺')
+            return 0
+        req = json.loads(req.text)
+        print(req)
+        try:
+            self.inertT(self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_1.tk_text_ldv7dw4e,req['msg'])
+        except:
+            self.inertT(self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_1.tk_text_ldv7dw4e,req['message'])
+
     
     def submit2(self,evt):
         print("<Button-1>事件未处理",evt)
@@ -506,7 +627,51 @@ class Win(WinGUI):
         print("<Button-1>事件未处理",evt)
 
     def submit5(self,evt):
-        print("<Button-1>事件未处理",evt)
+        print("sort",evt)
+        items = self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_5.tk_table_ldv7iw6p.get_children()
+        [self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_5.tk_table_ldv7iw6p.delete(item) for item in items]
+        self.data = self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_5.tk_input_ldv7jn0o.get().split(',')
+        self.teams = self.data[::2]
+        '''
+        此处 获取 各组的 放款金额
+        '''
+        headers = {
+        'cookie' : 'USER-AGENTLTJ=FDF5Zp1BZwus4mdt2vhDi26PQA+cx91yN0ZHxsW6H2kS0Dgx2scihw//jn3Lgzz1Kz6TJwagloy/oTnMBLZpz/Q+RpbSK87LImBDwd1MDJ8N5PBAmUiMsMyIBmpZj+eqjZ7qRmuvDNz8AsWuAcAIQcSUKWTW/yKfuBA+ZtshQYs=',
+        'Content-Type': 'application/json',
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.23',
+        'Connection': 'close'
+    }
+
+        url_count = 'https://letaojiabackstage.letaojiashop.com/Common/GroupsRank?ssTime={}&eeTime={}'.format(\
+    datetime.datetime.now().strftime('%Y-%m-%d'),datetime.datetime.now().strftime('%Y-%m-%d'))
+        req = requests.get(url = url_count,headers=headers)
+        html = req.text
+        top3d = re.findall('<h6>(.*?)</h6>.*?<p>(\d+)</p>\n<span>已成交</span>',html,re.S)
+        top3d = top3d[:3]
+        # other data
+        odata = re.findall(r'<td class="color">(.*?)</td.*?<span.*?<td.*?<td.*?<td>(\d+)</',html,re.S) 
+        odata = odata[:21]
+        cd = []
+        for i in top3d+odata:
+            for g in self.teams:
+                if g in i:
+                    cd.append(i)
+        print(cd)
+        acd = []
+        for i in cd:
+            i = list(i)
+            i.append(self.data[self.data.index(i[0])+1])
+            i.append(float(i[1])/int(self.data[self.data.index(i[0])+1]))
+            acd.append(i)
+        acd.sort(key=lambda acd:acd[3],reverse=True)
+        print(acd)
+        '''
+        打印到表上
+        '''
+        for i in range(len(cd)):
+            self.tk_tabs_ldv3hjab.tk_tabs_ldv3hjab_5.tk_table_ldv7iw6p.insert('',i,
+            values = (acd[i][0],acd[i][1],acd[i][2],acd[i][3]))
+
 
     def submit6(self,evt):
         print("<Button-1>事件未处理",evt)
